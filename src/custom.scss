@@ -1,0 +1,56 @@
+$warning: #010207;
+
+.pagebody {
+  background: linear-gradient(#152442, #8796b4);
+}
+
+#buttonsearch {
+  border-color: #152442;
+}
+#buttonsearch:hover {
+  background-color: #1f2e4c;
+}
+.articlesbut {
+  border-color: #152442 !important;
+}
+
+.articlesbut:hover {
+  background-color: #1f2e4c !important;
+}
+
+.footer-icon {
+  color: #838383;
+}
+
+.footer-links {
+  font-size: 0.8em;
+}
+
+.footer-links p {
+  margin-bottom: 0.3em;
+  color: #838383;
+}
+
+.footer-links a {
+  color: #838383;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #838383;
+  font-size: 0.6em;
+}
+
+footer {
+  background-color: #000000;
+}
+
+.spanbutton {
+  color: #838383;
+}
+
+#footerbutton {
+  border-color: #838383;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

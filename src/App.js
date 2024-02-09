@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import CustomHome from './CustomHome'
+import CustomNavbar from './components/CustomNavbar'
+import Details from './components/Details'
+import CustomFooter from './components/CustomFooter'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NotFound from './components/NotFound'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <body className="pagebody ">
+          <header>
+            <CustomNavbar className="" />
+          </header>
+          <main>
+            <Routes>
+              <Route element={<CustomHome />} path="/" />
+              <Route element={<Details />} path="/Details/:cityID" />
+              <Route element={<NotFound />} path="*" />
+            </Routes>
+          </main>
+          <footer>
+            <CustomFooter />
+          </footer>
+        </body>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App
